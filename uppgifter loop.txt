@@ -1,0 +1,327 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Configuration;
+using System.Text.RegularExpressions;
+
+namespace test
+{
+    class Program
+    {
+        
+        static void Main(string[] args)
+        {
+            // 4.Be användaren mata in ett tal. Spara värdet i en variabel.Upprepa detta 10
+            // gånger.För varje gång lägg till det inmatade värdet till variabelns värde.När det
+            // är klart skriv ut-Summan av det du matat in är: summan
+
+            //övning 4
+            //for (; ; )
+            //{
+            //    Console.WriteLine("Enter number1!");
+            //    string num1 = Console.ReadLine();
+
+            //    Console.WriteLine("Enter another number to add to number1 10 times ");
+            //    string num2 = Console.ReadLine();
+
+            //    double firsNumber, secondNumber;
+            //    double summa = 0;
+
+            //    bool isNumeric1 = double.TryParse(num1, out firsNumber);
+            //    bool isNumeric2 = double.TryParse(num2, out secondNumber);
+
+            //    if (isNumeric1 && isNumeric2)
+            //    {
+            //        summa = firsNumber;
+            //        for (int i = 0; i < 10; i++)
+            //        {
+            //            summa += secondNumber;
+            //        }
+            //        Console.WriteLine("Sum is: " + summa);
+            //        Console.WriteLine("_________________________________________");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Please enter numeric values, and try again!");
+            //        Console.WriteLine("_________________________________________");
+            //    }
+
+
+            //}
+            /*5. Skapa ett program där användaren får mata in ett tal. Låt sedan programmet
+            skriva ut alla siffor som är mindre än det inmatade talet men större än 0. Lös
+            detta med en loop.*/
+
+            //for(; ; )
+            //{
+            //    Console.WriteLine("Enter integer number!");
+            //    string num1 = Console.ReadLine();
+            //    Console.WriteLine("_________________________________________");
+
+            //    int Number;
+
+            //    bool isNumeric = int.TryParse(num1, out Number);               
+
+            //    if (isNumeric & Number > 1)
+            //    {
+            //       for(int i = Number -1; i > 0; i--)
+            //        {
+            //            Console.Write(i + "  ");
+
+            //        }
+            //        Console.WriteLine();
+            //        Console.WriteLine("_________________________________________");
+
+            //    }
+            //    else if(isNumeric &  Number <= 1)
+            //    {
+            //        Console.WriteLine("You can't use minus values, \"0\" and \"1\". Use integers heigher than \"0\" and \"1\"");
+            //        Console.WriteLine("_________________________________________");
+            //    }
+
+            //    else
+            //    {
+            //        Console.WriteLine("You'v entered a string. try again!");
+            //        Console.WriteLine("_________________________________________");
+
+            //    }
+
+            //}
+
+            /*6.Skapa ett program där användaren skriver in ett tal.
+                a.Skriv mata in ett tal på skärmen
+                b.Om det är högre än 10 får användaren ett meddelande som säger-Värdet
+                  är för högt.Visa meddelandet-Mata in ett tal på skärmen.
+                c.Om det är under 10 får användaren ett meddelande som säger-Värdet är
+                    för lågt.Visa meddelandet-Mata in ett tal på skärmen.
+                d.När användaren matar in 10 avbryts programmet och användaren får
+                    meddelandet – Du matade in rätt tal.*/
+
+            //for (; ; )
+            //{
+            //    Console.WriteLine("Enter a number ");
+            //    string s = Console.ReadLine();
+            //    double num;
+            //    bool isNumeric = double.TryParse(s, out num);
+            //    if (isNumeric & num > 10)
+            //    {
+            //        Console.WriteLine("This is heigh Value");
+            //        Console.WriteLine("______________________________________");
+            //    }
+            //    else if (isNumeric & num < 10)
+            //    {
+            //        Console.WriteLine("this is low value");
+            //        Console.WriteLine("______________________________________");
+            //    }
+
+            //    else if (isNumeric & num == 10)
+            //    {
+            //        Console.WriteLine("you guessed right number ");
+            //        Console.ReadLine();
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("please use numeric values");
+            //        Console.WriteLine("______________________________________");
+            //    }
+
+
+            //}
+
+            /*7.Skapa ett program som skriver ut alla udda tal under 100.Ett tips är att
+                använda operatorn % (modulus).Detta räknar ut resten efter att två tal
+                divideras tex 5 % 2 blir 1*/
+
+            //for(int i = 1; i < 100; i++)
+            //{
+            //    if(i % 2 != 0)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //}
+            //Console.ReadKey();
+
+            /*8.Skapa ett program där användaren får mata in ett tal.
+             a.Låt sedan programmet kontrollera om värdet är mindre än 30.
+             b.Kontrollera att användaren matar in ett giltigt tal och inte andra tecken.
+             tips är att använda int.TryParse metoden.Om det inte är ett tal meddela
+             användaren –Du har matat in ett ogiltigt tal
+             c.Är det större än 30 skriv ett meddelande - Du har matat in ett felaktigt tal
+             d.Annars skriva ut alla siffor som är större än det inmatade talet men
+             mindre eller lika med än 30.Lös detta med en for-loop.*/
+
+
+
+            //for (; ; )
+            //{
+            //    Console.WriteLine("Enter a number");
+            //    string str = Console.ReadLine();
+
+            //    double d;
+
+            //    bool isNumeric = double.TryParse(str, out d);
+            //    if (isNumeric & d > 30)
+            //    {
+            //        Console.WriteLine("Number is bigger than 30");
+            //        Console.WriteLine("___________________________");
+            //    }
+            //    else if (isNumeric & d < 30)
+            //    {
+            //        Console.WriteLine("Number is less than 30");
+            //        Console.WriteLine("___________________________");
+            //    }
+            //    else if (isNumeric & d == 30)
+            //    {
+            //        Console.WriteLine("Number equal 30");
+            //        Console.WriteLine("___________________________");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("´Please enter a numeric value'");
+            //        Console.WriteLine("___________________________");
+            //    }
+
+
+            //}
+
+            /*9. Skapa ett program där användaren skall mata in kontaktuppgifter. Ta emot
+            alla värden i variabler
+            a. Be användaren mata in sitt namn, gatuadress, postnummer och postort.
+            b. Kontrollera att alla uppgifter är ifyllda. Är dom det skall ett meddelande
+            visas för användaren som säger- Alla uppgifter ifyllda. Programmet avslutas
+            sedan.
+            c. Om inte alla uppgifter är ifyllda skall man börja om med steg a-d.
+            Kontrollera för varje värde om just det värdet är ifyllt. Programmet skall inte be
+            användaren mata in ett värde som redan är inmatat.*/
+            //for(; ;)
+            //            {
+            //                Console.WriteLine("Enter your Name");
+            //                string name = Console.ReadLine();
+            //                Regex reg = new Regex("[a-z]+(\\s[A-Z][a-z]+)*$");
+
+            //                Console.WriteLine("Enter your Post Number");
+            //                string PostNumber =  Console.ReadLine();
+            //                Regex reg2 = new Regex("^\\d{5}$");
+
+            //                Console.WriteLine("Enter the name of your City");
+            //                string city = Console.ReadLine();
+            //                Regex reg3 = new Regex("[a-z]+(\\s[A-Z][a-z]+)*$");
+
+            //                if (reg.IsMatch(name) & reg2.IsMatch(PostNumber) & reg3.IsMatch(city))
+            //                {
+            //                    Console.WriteLine("__________________________________________");
+            //                    Console.WriteLine("You'v Entered all the fields correctly");
+            //                    Console.WriteLine($"{name}  {PostNumber}  {city}");
+            //                    Console.ReadKey();
+            //                    break;
+            //                }else
+            //                {
+            //                    Console.WriteLine("__________________________________________");
+            //                    Console.WriteLine("You have used incorrect format when you filled your information, please try again with right format");
+            //                    Console.WriteLine("__________________________________________");
+            //                }
+            //            }
+
+            /*10. Skapa ett program där användaren skall logga in . Ta emot inmatade värden
+            i variabler.
+            a. Skapa en konstant som innehåller användarnamn. Sätt värdet på den till
+            abc123
+            b. Skapa en konstant som innehåller lösenord. Sätt värdet på den till
+            password
+            c. Skriv ett meddelande till användaren och be denne att ange
+            användarnamn
+            d. Skriv ett meddelande till användaren och be denne att ange lösenord
+            e. Om användaren anger ett riktigt användarnamn och lösenord, visa ett
+            meddelande som säger- Du är inloggad. Avsluta programmet.
+            f. Om användaren anger felaktiga uppgifter , skriv ett meddelande på
+            skärmen och tala om vad som var felaktigt. Fråga om användaren vill försöka
+            igen(J/N). Om svaret är J skall inloggningen återupprepas*/
+
+            //for(; ; )
+            //            {
+            //                const string userName = "abc123";
+            //                const string password = "password";
+
+            //                Console.WriteLine("Enter Your User Name");
+            //                string uName = Console.ReadLine();
+
+            //                Console.WriteLine("Enter your Passeord");
+            //                string pw = Console.ReadLine(); 
+
+            //                if((string.Compare(userName, uName) == 0) & (string.Compare(password,pw)== 0))
+            //                {
+            //                    Console.WriteLine("You loged in successfully");
+            //                    Console.ReadKey();
+            //                    break;
+            //                }
+            //                else if (string.Compare(userName, uName) != 0)
+            //                    {
+            //                    Console.WriteLine("Wrong user name");
+            //                    Console.WriteLine("Do you want to try again? Y/N");
+            //                    string svar = Console.ReadLine();   
+            //                    if(svar == "Y" | svar == "y")
+            //                    {
+            //                        continue;
+            //                    }
+            //                    else if (svar == "N" | svar == "n")
+            //                    {
+            //                        break;
+            //                    }
+            //                }
+            //                else if (string.Compare(password, pw) != 0)
+            //                {
+            //                    Console.WriteLine("Wrong password");
+            //                    Console.WriteLine("Do you want to try again? Y/N");
+            //                    string svar = Console.ReadLine();
+            //                    if (svar == "Y" | svar == "y")
+            //                    {
+            //                        continue;
+            //                    }
+            //                    else if (svar == "N" | svar == "n")
+            //                    {
+            //                        break;
+            //                    }
+            //                }
+            //            }
+
+            /*11. Hur många tal mellan 1-1000 är jämt delbara med 17? Skriv ut antalet till
+            skärmen.*/
+            //int x = 0;
+            //for (int i = 1; i <= 1000; i++)
+            //{
+            //    if (i % 17 == 0)
+            //    {
+            //        x++;
+
+            //    }                
+
+            //}
+            //Console.WriteLine("Numbers 0-1000 that accept divition on 17 = " + x);
+            //Console.ReadKey();
+
+            /*12. Du har talen 265-290. Summera alla jämna tal och ta sedan fram
+            medelvärdet. Skriv ut summan till skärmen.*/
+            int x = 0;
+            int summa = 0;
+            for(int i = 265; i <= 290; i++)
+            {
+                if(i % 2 == 0)
+                {
+                    x++;
+                    summa += i;
+                }
+            }
+            Console.WriteLine("sum is : " + summa + " Avarage is : " + (summa/x));
+            Console.ReadKey();  
+
+
+
+}
+}
+
+
+}
